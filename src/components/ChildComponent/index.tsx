@@ -8,7 +8,7 @@ export default function ChildComponent() {
         const newCountValue = count + 1;
         setCount(newCountValue);
     }
-
+    
     return (
         <>
             <div style={
