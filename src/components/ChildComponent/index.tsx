@@ -1,14 +1,26 @@
 import { useState } from "react"
 
-export default function ChildComponent() {
+// a prop vai ser um evento
+
+type Props = {
+    // disparar o evento (função) sempre que trocar o valor 
+    // eslint-disable-next-line @typescript-eslint/ban-types
+    onChangeValue?: Function;
+}
+
+export default function ChildComponent({ onChangeValue }: Props) {
 
     const [count, setCount] = useState<number>(0);
 
-    function increaseValue () {
+    function increaseValue() {
         const newCountValue = count + 1;
         setCount(newCountValue);
+        if (onChangeValue !== undefined) {
+            onChangeValue(newCountValue);
+        }
+
     }
-    
+
     return (
         <>
             <div style={

@@ -7,6 +7,10 @@ export default function ParentComponent() {
 
     const [quadruple, setQuadruple] =  useState<number> (0);
 
+    function handleChangeValue (newValue : number) {
+        setQuadruple(newValue * 4);
+    }
+
     return (
         <>
             <div style={
@@ -17,8 +21,8 @@ export default function ParentComponent() {
                     borderRadius: "10px"
                 }
             }>
-                <h3>{quadruple}</h3>
-                <ChildComponent></ChildComponent>
+                <p>quadruple</p><h3>{quadruple}</h3>
+                <ChildComponent onChangeValue={handleChangeValue}></ChildComponent>
 
             </div>
         </>
