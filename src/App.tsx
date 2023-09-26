@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
-import ChildComponent from './components/ChildComponent'
-import ParentComponent from './components/ParentComponet'
+
+import GrantParentComponent from './components/GrandFatherComponent'
+import GrandFatherComponent from './components/GrandFatherComponent'
 
 function App() {
 
 
   return (
     <>
-      <h2>Projeto React tutorial sobre eventos entre componentes pai e filho</h2>
-      <ParentComponent></ParentComponent>
+      <h2>Projeto React tutorial sobre eventos entre componentes pai e filho</h2>     
+      <GrandFatherComponent></GrandFatherComponent>
     </>
 
   )
