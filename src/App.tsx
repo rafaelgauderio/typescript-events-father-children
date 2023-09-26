@@ -1,7 +1,6 @@
 
 import './App.css'
 
-import GrantParentComponent from './components/GrandFatherComponent'
 import GrandFatherComponent from './components/GrandFatherComponent'
 
 function App() {

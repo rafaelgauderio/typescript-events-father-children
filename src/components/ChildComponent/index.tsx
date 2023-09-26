@@ -21,6 +21,15 @@ export default function ChildComponent({ onChangeValue }: Props) {
 
     }
 
+    function decreaseValue() {
+        const newCountValue = count - 1;
+        if (count > 0 && onChangeValue) {
+            setCount(newCountValue);
+            onChangeValue(newCountValue);
+        }
+      
+    }
+
     return (
         <>
             <div style={
@@ -31,8 +40,10 @@ export default function ChildComponent({ onChangeValue }: Props) {
                     borderRadius: "10px"
                 }
             }>
+                <h3>Child</h3>
                 <h3>{count}</h3>
                 <button onClick={increaseValue}>Click to increase</button>
+                <button onClick={decreaseValue}>Click to decrease</button>
 
             </div>
         </>

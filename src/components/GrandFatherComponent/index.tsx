@@ -21,6 +21,7 @@ export default function GrantParentComponent() {
                     borderRadius: "10px"
                 }
             }>
+                   <h3>Grand Parent</h3>
                 <p>half of quadruple</p><h3>{half}</h3>
                 <ParentComponent onChangeValue={handleChangeValue}></ParentComponent>
 
